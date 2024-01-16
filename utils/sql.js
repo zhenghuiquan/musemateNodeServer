@@ -3,12 +3,11 @@ const { Pool } = pkg;
 import moment from "moment-timezone"
 
 var env = process.env.NODE_ENV == "production"
-
 const pool = new Pool({
-  user: env ? "" : "postgres",
-  host: env ? "" : "dn.arbtv.top",
-  database: env ? "" : 'social_dn',
-  password: "1234qwer..",
+  user: env ? "postgres" : "postgres",
+  host: env ? "social-appserver.cfkraj9k0esc.us-west-1.rds.amazonaws.com" : "dn.arbtv.top",
+  database: env ? "social_dn" : 'social_dn',
+  password: env ? "vm&JsPg2CM" : "1234qwer..",
   port: 5432,
 })
 

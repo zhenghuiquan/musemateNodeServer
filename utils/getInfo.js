@@ -3,6 +3,7 @@ import moment from "moment-timezone"
 
 export function getVerifyToken(token, callback) {
   pg.query('user_id', `key = '${token}'`, 'authtoken_token', (data) => {
+    console.log(data);
     callback(data[0]["user_id"])
   })
 }

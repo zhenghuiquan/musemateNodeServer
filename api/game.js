@@ -10,9 +10,10 @@ import {
 } from '../utils/md5.js'
 import moment from "moment-timezone"
 import cron from "node-cron"
-cron.schedule('0 0 * * *', () => {
-  dailyRewardLogic();
-});
+// cron.schedule('0 0 * * *', () => {
+//   dailyRewardLogic();
+// });
+
 async function dailyRewardLogic() {
   pg.query('SUM(spend_coin) AS total', `end_time >= ${moment().startOf('day').valueOf()} AND end_time < ${moment().endOf('day').valueOf()}`, 'game_system_rank', (data) => {
     let total = data[0]['total']

@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "NODE_ENV=dev nodemon app.js",
     "serve:test": "NODE_ENV=test nodemon app.js",
-    "serve:produciton": "NODE_ENV=produciton nodemon app.js",
+    "serve:production": "NODE_ENV=production nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,8 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
     "jsonwebtoken": "^9.0.2",
     "moment-timezone": "^0.5.43",
     "node-cron": "^3.0.3",
